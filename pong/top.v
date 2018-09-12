@@ -1,15 +1,18 @@
 // Pong VGA game
 // (c) fpga4fun.com
 
-module pong(clk_16, vga_h_sync, vga_v_sync, vga_R, vga_G, vga_B, quadA, quadB);
+module pong(clk_16, vga_h_sync, vga_v_sync, vga_R, vga_G, vga_B, quadA, quadB, USBPU);
 input clk_16;
 output vga_h_sync, vga_v_sync, vga_R, vga_G, vga_B;
 input quadA, quadB;
+output USBPU;
 
 wire inDisplayArea;
 wire [9:0] CounterX;
 wire [8:0] CounterY;
 wire locked, clk;
+
+assign USBPU = 0;
 
 SB_PLL40_CORE #(
                 .FEEDBACK_PATH("SIMPLE"),
