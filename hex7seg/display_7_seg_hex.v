@@ -13,22 +13,17 @@ decoder_7_seg_hex decoder(.clk (clk), .seg(seg), .d (digit_data));
 
 always @(posedge clk)
 begin
-  prescaler <= prescaler + 24'd1;
-  if (prescaler == 24'd28000) // 1 kHz
-  begin
+  prescaler <= prescaler + 1;
+  if (prescaler == 8000) begin // 1khz
     prescaler <= 0;
-    digit_posn <= digit_posn + 2'd1;
-    if (digit_posn == 1)
-    begin
+    digit_posn <= digit_posn + 1;
+    if (digit_posn == 1) begin
       digit_data <= n[3:0];
-      digit <= 4'b1;
-    end
-    if (digit_posn == 0)
-    begin
+      digit <= 0;
+    end else if (digit_posn == 0) begin
       digit_data <= n[7:4];
-      digit <= 4'b0;
+      digit <= 1;
     end
   end
 end
 endmodule
-© 2018 GitHub, Inc.
