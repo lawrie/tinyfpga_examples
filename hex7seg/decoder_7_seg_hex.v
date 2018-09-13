@@ -10,7 +10,7 @@ always @(posedge clk) begin
   'h1: seg <= 'b0000110;
   'h2: seg <= 'b1101101;
   'h3: seg <= 'b1001111;
-  'h4: seg <= 'b0110101;
+  'h4: seg <= 'b0010111;
   'h5: seg <= 'b1011011;
   'h6: seg <= 'b1111011;
   'h7: seg <= 'b0001110;

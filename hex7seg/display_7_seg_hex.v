@@ -17,10 +17,10 @@ always @(posedge clk) begin
     prescaler <= 0;
     posn <= posn + 1;
     if (posn == 1) begin
-      data <= value[3:0];
+      data <= value[7:4];
       digit <= 0;
     end else if (posn == 0) begin
-      data <= value[7:4];
+      data <= value[3:0];
       digit <= 1;
     end
   end

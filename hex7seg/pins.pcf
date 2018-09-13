@@ -7,5 +7,7 @@ set_io seg[4] A7
 set_io seg[5] B6
 set_io seg[6] A6
 
+set_io button H2
+
 set_io usbpu A3
 set_io clk B2
