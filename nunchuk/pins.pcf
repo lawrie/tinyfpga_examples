@@ -1,0 +1,16 @@
+set_io digit C9
+set_io seg[0] A9
+set_io seg[1] B8
+set_io seg[2] A8
+set_io seg[3] B7
+set_io seg[4] A7
+set_io seg[5] B6
+set_io seg[6] A6
+
+set_io button H2
+
+set_io scl A2
+set_io sda A1
+
+set_io usbpu A3
+set_io clk B2
