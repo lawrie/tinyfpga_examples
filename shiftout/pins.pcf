@@ -1,0 +1,8 @@
+set_io shiftout_data A2
+set_io shiftout_clock A1
+set_io shiftout_latch B1
+
+set_io i-nowarn USBPU A3
+
+# 16MHz clock
+set_io -nowarn clk_16Mhz B2 # input
